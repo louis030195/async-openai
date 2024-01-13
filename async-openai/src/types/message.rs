@@ -18,7 +18,7 @@ pub struct MessageObject {
     /// The identifier, which can be referenced in API endpoints.
     pub id: String,
     /// The object type, which is always `thread.message`.
-    pub object: String,
+    pub object: Option<String>,
     /// The Unix timestamp (in seconds) for when the message was created.
     pub created_at: i32,
     /// The [thread](https://platform.openai.com/docs/api-reference/threads) ID that this message belongs to.
