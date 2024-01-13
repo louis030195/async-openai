@@ -20,7 +20,7 @@ pub struct MessageObject {
     /// The object type, which is always `thread.message`.
     pub object: String,
     /// The Unix timestamp (in seconds) for when the message was created.
-    pub created_at: Option<i32>,
+    pub created_at: i32,
     /// The [thread](https://platform.openai.com/docs/api-reference/threads) ID that this message belongs to.
     pub thread_id: String,
     /// The entity that produced the message. One of `user` or `assistant`.

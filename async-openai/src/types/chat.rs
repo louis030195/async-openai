@@ -645,7 +645,7 @@ pub struct CreateChatCompletionStreamResponse {
     pub choices: Vec<ChatChoiceStream>,
 
     /// The Unix timestamp (in seconds) of when the chat completion was created. Each chunk has the same timestamp.
-    pub created: u32,
+    pub created: Option<u32>,
     /// The model to generate the completion.
     pub model: String,
     /// This fingerprint represents the backend configuration that the model runs with.
