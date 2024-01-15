@@ -64,7 +64,7 @@ pub enum AssistantTools {
     Code(AssistantToolsCode),
     Retrieval(AssistantToolsRetrieval),
     Function(AssistantToolsFunction),
-    Extra(AssistantToolsFunction),
+    Extra(AssistantToolsExtra),
 }
 
 #[derive(Clone, Serialize, Default, Debug, Deserialize, Builder, PartialEq)]
