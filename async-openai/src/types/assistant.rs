@@ -51,12 +51,20 @@ pub struct AssistantToolsFunction {
     pub function: FunctionObject,
 }
 
+/// Extra tool (action, or custom tool)
+#[derive(Clone, Serialize, Debug, Deserialize, PartialEq)]
+pub struct AssistantToolsExtra {
+    pub r#type: String,
+    pub data: Option<HashMap<String, serde_json::Value>>,
+}
+
 #[derive(Clone, Serialize, Debug, Deserialize, PartialEq)]
 #[serde(untagged)]
 pub enum AssistantTools {
     Code(AssistantToolsCode),
     Retrieval(AssistantToolsRetrieval),
     Function(AssistantToolsFunction),
+    Extra(AssistantToolsFunction),
 }
 
 #[derive(Clone, Serialize, Default, Debug, Deserialize, Builder, PartialEq)]
