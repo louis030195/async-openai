@@ -55,7 +55,8 @@ pub struct AssistantToolsFunction {
 #[derive(Clone, Serialize, Debug, Deserialize, PartialEq)]
 pub struct AssistantToolsExtra {
     pub r#type: String,
-    pub data: Option<HashMap<String, serde_json::Value>>,
+    pub data: String,
+    // pub data: Option<HashMap<String, serde_json::Value>>,
 }
 
 #[derive(Clone, Serialize, Debug, Deserialize, PartialEq)]
