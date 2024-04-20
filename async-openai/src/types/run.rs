@@ -130,6 +130,7 @@ pub struct CreateRunRequest {
     pub tools: Option<Vec<AssistantTools>>,
 
     pub metadata: Option<HashMap<String, serde_json::Value>>,
+    pub stream: Option<bool>,
 }
 
 #[derive(Clone, Serialize, Default, Debug, Deserialize, PartialEq)]
@@ -151,6 +152,7 @@ pub struct ListRunsResponse {
 pub struct SubmitToolOutputsRunRequest {
     /// A list of tools for which the outputs are being submitted.
     pub tool_outputs: Vec<ToolsOutputs>,
+    pub stream: Option<bool>,
 }
 
 #[derive(Clone, Serialize, Default, Debug, Deserialize, Builder, PartialEq)]
