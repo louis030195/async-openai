@@ -576,7 +576,8 @@ pub struct CreateChatCompletionResponse {
     /// The Unix timestamp (in seconds) of when the chat completion was created.
     pub created: u32,
     /// The model used for the chat completion.
-    pub model: String,
+    pub model: Option<String>,
+
     /// This fingerprint represents the backend configuration that the model runs with.
     ///
     /// Can be used in conjunction with the `seed` request parameter to understand when backend changes have been made that might impact determinism.
@@ -647,7 +648,7 @@ pub struct CreateChatCompletionStreamResponse {
     /// The Unix timestamp (in seconds) of when the chat completion was created. Each chunk has the same timestamp.
     pub created: Option<u32>,
     /// The model to generate the completion.
-    pub model: String,
+    pub model: Option<String>,
     /// This fingerprint represents the backend configuration that the model runs with.
     /// Can be used in conjunction with the `seed` request parameter to understand when backend changes have been made that might impact determinism.
     pub system_fingerprint: Option<String>,
